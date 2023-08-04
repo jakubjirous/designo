@@ -1,0 +1,26 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+import BaseLayout from "../layouts/base-layout.astro";
+
+const { lang, prefix } = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={`${t("contact.title")} | ${t("site.title")}`}>
+  <Header />
+  <main>
+    <h1>Contact</h1>
+    <ul>
+      <li><a href={`${prefix}`}>Home</a></li>
+      <li><a href={`${prefix}company`}>Our Company</a></li>
+      <li><a href={`${prefix}location`}>Location</a></li>
+      <li><a href={`${prefix}contact`}>Contact</a></li>
+    </ul>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style></style>
