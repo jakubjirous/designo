@@ -1,0 +1,20 @@
+---
+import Container from "./container.astro";
+
+/*
+import { Image } from "astro:assets";
+
+import logo from "../assets/logo.svg";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const { lang, prefix } = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+*/
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="">
+  <Container>Footer – &copy; {currentYear}</Container>
+</footer>
