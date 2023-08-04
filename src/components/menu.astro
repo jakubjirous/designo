@@ -1,0 +1,59 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+interface Props {
+  class?: string;
+  style?: string;
+  onDark?: boolean;
+}
+
+const { class: className, style, onDark = false } = Astro.props;
+
+const { lang, prefix } = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+---
+
+<nav class="flex flex-col items-center justify-center md:flex-row">
+  <ul class="inline-flex flex-col items-center justify-center gap-8 md:flex-row md:gap-11">
+    <li>
+      <a
+        href={`${prefix}${t("company.url")}`}
+        aria-label={t("company.title")}
+        class={onDark ? "nav-link-on-dark" : "nav-link-on-light"}
+      >
+        {t("company.title")}
+      </a>
+    </li>
+    <li>
+      <a
+        href={`${prefix}${t("location.url")}`}
+        aria-label={t("location.title")}
+        class={onDark ? "nav-link-on-dark" : "nav-link-on-light"}
+      >
+        {t("location.title")}
+      </a>
+    </li>
+    <li>
+      <a
+        href={`${prefix}${t("contact.url")}`}
+        aria-label={t("contact.title")}
+        class={onDark ? "nav-link-on-dark" : "nav-link-on-light"}
+      >
+        {t("contact.title")}
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .nav-link-base {
+    @apply inline-flex border-b-[0.063rem] border-transparent text-[0.938rem] uppercase leading-none transition-all duration-400;
+  }
+  .nav-link-on-light {
+    @apply nav-link-base text-ship-grey hover:border-ship-grey;
+  }
+  .nav-link-on-dark {
+    @apply nav-link-base text-white hover:border-white;
+  }
+</style>
