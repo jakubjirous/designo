@@ -28,6 +28,13 @@ export const ui: TranslationObject = {
 
     "404.title": "Page Not Found",
 
+    "get-in-touch.btn.url": "contact",
+    "get-in-touch.btn.aria": "Get In Touch",
+    "get-in-touch.btn.title": "Get In Touch",
+    "get-in-touch.heading": "Let’s talk about your project",
+    "get-in-touch.content":
+      "Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.",
+
     "social.facebook.title": "Facebook",
     "social.facebook.url": "https://www.facebook.com/",
     "social.youtube.title": "YouTube",
