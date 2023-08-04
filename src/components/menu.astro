@@ -14,13 +14,13 @@ const { lang, prefix } = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<nav class="flex flex-col items-center justify-center md:flex-row">
+<nav class:list={[className, "flex flex-col items-center justify-center md:flex-row"]}>
   <ul class="inline-flex flex-col items-center justify-center gap-8 md:flex-row md:gap-11">
     <li>
       <a
         href={`${prefix}${t("company.url")}`}
         aria-label={t("company.title")}
-        class={onDark ? "nav-link-on-dark" : "nav-link-on-light"}
+        class={onDark ? "nav-link-on-dark focus-on-dark" : "nav-link-on-light focus-on-light"}
       >
         {t("company.title")}
       </a>
@@ -29,7 +29,7 @@ const t = useTranslations(lang);
       <a
         href={`${prefix}${t("location.url")}`}
         aria-label={t("location.title")}
-        class={onDark ? "nav-link-on-dark" : "nav-link-on-light"}
+        class={onDark ? "nav-link-on-dark focus-on-dark" : "nav-link-on-light focus-on-light"}
       >
         {t("location.title")}
       </a>
@@ -38,7 +38,7 @@ const t = useTranslations(lang);
       <a
         href={`${prefix}${t("contact.url")}`}
         aria-label={t("contact.title")}
-        class={onDark ? "nav-link-on-dark" : "nav-link-on-light"}
+        class={onDark ? "nav-link-on-dark focus-on-dark" : "nav-link-on-light focus-on-light"}
       >
         {t("contact.title")}
       </a>
@@ -48,12 +48,12 @@ const t = useTranslations(lang);
 
 <style>
   .nav-link-base {
-    @apply inline-flex border-b-[0.063rem] border-transparent text-[0.938rem] uppercase leading-none transition-all duration-400;
+    @apply inline-flex rounded-tl-2xl rounded-tr-2xl border-b-[0.063rem] border-b-transparent text-[0.938rem] uppercase leading-none transition-all duration-400;
   }
   .nav-link-on-light {
-    @apply nav-link-base text-ship-grey hover:border-ship-grey;
+    @apply nav-link-base text-ship-grey hover:border-b-ship-grey;
   }
   .nav-link-on-dark {
-    @apply nav-link-base text-white hover:border-white;
+    @apply nav-link-base text-white hover:border-b-white;
   }
 </style>

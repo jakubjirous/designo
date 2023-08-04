@@ -43,6 +43,10 @@ export default {
       transitionDuration: {
         400: "400ms",
       },
+      gridTemplateRows: {
+        footer: "repeat(6, minmax(0, auto))",
+        "footer-md": "repeat(3, minmax(0, auto))",
+      },
     },
   },
   plugins: [containerQueriesPlugin, typographyPlugin],

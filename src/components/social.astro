@@ -13,13 +13,13 @@ const { lang, prefix } = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="flex flex-row items-center gap-4">
+<div class:list={[className, "flex flex-row items-center justify-center gap-4"]}>
   <a
     href={t("social.facebook.url")}
     target="_blank"
     rel="noreferrer"
     aria-label={t("social.facebook.title")}
-    class="social-link group"
+    class="social-link focus-on-dark group"
   >
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -32,7 +32,7 @@ const t = useTranslations(lang);
     target="_blank"
     rel="noreferrer"
     aria-label={t("social.youtube.title")}
-    class="social-link group"
+    class="social-link focus-on-dark group"
   >
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -47,7 +47,7 @@ const t = useTranslations(lang);
     target="_blank"
     rel="noreferrer"
     aria-label={t("social.twitter.title")}
-    class="social-link group"
+    class="social-link focus-on-dark group"
   >
     <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -60,7 +60,7 @@ const t = useTranslations(lang);
     target="_blank"
     rel="noreferrer"
     aria-label={t("social.pinterest.title")}
-    class="social-link group"
+    class="social-link focus-on-dark group"
   >
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -73,7 +73,7 @@ const t = useTranslations(lang);
     target="_blank"
     rel="noreferrer"
     aria-label={t("social.instagram.title")}
-    class="social-link group"
+    class="social-link focus-on-dark group"
   >
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

@@ -8,15 +8,44 @@ import Social from "./social.astro";
 const { lang, prefix } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
-
-const currentYear = new Date().getFullYear();
 ---
 
-<footer class="min-h-[10rem] bg-baltic">
+<footer class="bg-baltic pb-16 pt-60 md:pt-40 xl:pt-36">
   <Container>
-    <Logo href={prefix} ariaLabel={t("site.title")} onDark={true} />
-    <Menu onDark={true} />
-    <Social />
-    Footer – &copy; {currentYear}
+    <div
+      class="grid grid-cols-1 grid-rows-footer items-center gap-8 md:grid-cols-3 md:grid-rows-footer-md md:gap-[2.625rem]"
+    >
+      <Logo
+        href={prefix}
+        ariaLabel={t("site.title")}
+        onDark={true}
+        class="justify-center md:order-1 md:justify-self-start"
+      />
+      <hr class="bg-white opacity-10 md:order-3 md:col-span-3" />
+      <Menu onDark={true} class="md:order-2 md:col-span-2 md:justify-self-end" />
+      <address class="md:order-4">
+        <span class="font-bold">Designo Central Office</span>
+        <br />
+        3886 Wellington Street <br />
+        Toronto, Ontario M9C 3J5
+      </address>
+      <address class="md:order-5">
+        <span class="font-bold">Contact Us (Central Office)</span>
+        <br />
+        P : <a href="tel:+12538638967" class="address-link focus-on-dark">+1 253-863-8967</a>
+        <br />
+        M : <a href="mailto:contact@designo.co" class="address-link focus-on-dark">contact@designo.co</a>
+      </address>
+      <Social class="md:order-6 md:justify-self-end" />
+    </div>
   </Container>
 </footer>
+
+<style>
+  address {
+    @apply text-center font-jost text-base not-italic leading-[1.625rem] text-white opacity-50 md:text-left;
+  }
+  .address-link {
+    @apply inline-flex rounded-tl-2xl rounded-tr-2xl border-b border-b-transparent leading-none transition-all duration-400 hover:border-b-white;
+  }
+</style>
