@@ -5,7 +5,11 @@ import { Image } from "astro:assets";
 import logo from "../assets/logo.svg";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 */
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Container from "./container.astro";
+import Logo from "./logo.astro";
+import Menu from "./menu.astro";
 
 /*
 interface Props {
@@ -13,16 +17,19 @@ interface Props {
 }
 
 const { withoutMenu } = Astro.props;
-
+*/
 
 const { lang, prefix } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
-*/
 ---
 
 <header>
-  <Container>Header</Container>
+  <Container>
+    Header
+    <Logo href={prefix} ariaLabel={t("site.title")} />
+    <Menu />
+  </Container>
 </header>
 
 <style></style>

@@ -1,20 +1,22 @@
 ---
 import Container from "./container.astro";
-
-/*
-import { Image } from "astro:assets";
-
-import logo from "../assets/logo.svg";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Logo from "./logo.astro";
+import Menu from "./menu.astro";
+import Social from "./social.astro";
 
 const { lang, prefix } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
-*/
 
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="">
-  <Container>Footer – &copy; {currentYear}</Container>
+<footer class="min-h-[10rem] bg-baltic">
+  <Container>
+    <Logo href={prefix} ariaLabel={t("site.title")} onDark={true} />
+    <Menu onDark={true} />
+    <Social />
+    Footer – &copy; {currentYear}
+  </Container>
 </footer>

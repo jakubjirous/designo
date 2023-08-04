@@ -7,3 +7,6 @@
 @import "tailwindcss/utilities";
 @import "utilities/typography.css" layer(utilities);
 @import "utilities/focus.css" layer(utilities);
+@import "utilities/animation-delay.css" layer(utilities);
+@import "utilities/animation-duration.css" layer(utilities);
+@import "utilities/animation-direction.css" layer(utilities);
