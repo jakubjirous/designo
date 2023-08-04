@@ -37,6 +37,12 @@ export default {
       transitionTimingFunction: {
         DEFAULT: defaultTheme.transitionTimingFunction["in-out"],
       },
+      backgroundImage: {
+        logo: "conic-gradient(var(--tw-gradient-stops))",
+      },
+      transitionDuration: {
+        400: "400ms",
+      },
     },
   },
   plugins: [containerQueriesPlugin, typographyPlugin],
