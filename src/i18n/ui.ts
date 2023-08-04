@@ -18,11 +18,25 @@ export const ui: TranslationObject = {
     "site.ogImage": "assets/designo-og.webp",
 
     "company.title": "Our Company",
+    "company.url": "company",
 
     "location.title": "Locations",
+    "location.url": "location",
 
     "contact.title": "Contact",
+    "contact.url": "contact",
 
     "404.title": "Page Not Found",
+
+    "social.facebook.title": "Facebook",
+    "social.facebook.url": "https://www.facebook.com/",
+    "social.youtube.title": "YouTube",
+    "social.youtube.url": "https://www.youtube.com/",
+    "social.twitter.title": "Twitter",
+    "social.twitter.url": "https://twitter.com/",
+    "social.pinterest.title": "Pinterest",
+    "social.pinterest.url": "https://www.pinterest.com/",
+    "social.instagram.title": "Instagram",
+    "social.instagram.url": "https://www.instagram.com/",
   },
 };
