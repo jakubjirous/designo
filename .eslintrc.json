@@ -43,10 +43,7 @@
         "ignoreRestSiblings": true
       }
     ],
-    "@typescript-eslint/triple-slash-reference": [
-      "error",
-      { "path": "always" }
-    ],
+    "@typescript-eslint/triple-slash-reference": ["error", { "path": "always" }],
     "curly": "warn",
     "func-names": ["warn", "as-needed"],
     "import/no-extraneous-dependencies": "off",

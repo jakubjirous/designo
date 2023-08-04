@@ -1,9 +1,9 @@
 ---
+import "../styles/main.css";
+
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
-
-import "../styles/main.css";
 ---
 
 <BaseLayout>
@@ -41,12 +41,13 @@ import "../styles/main.css";
       </div>
 
       <div class="bg-athens-grey">
-        <a href="#" class="btn-on-light focus-on-light">Learn More</a>
+        <a href="#id" aria-label="Link" class="btn-on-light focus-on-light">Learn More</a>
       </div>
     </div>
     <hr />
 
-    <label class="form-label">Empty Form</label>
+    <label for="test" class="form-label">Empty Form</label>
+    <input id="test" />
 
     <hr />
 

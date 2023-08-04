@@ -1,9 +1,11 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import Container from "../components/container.astro";
+/*
 import { Image } from "astro:assets";
 
 import logo from "../assets/logo.svg";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+*/
+import Container from "./container.astro";
 
 /*
 interface Props {
@@ -11,11 +13,12 @@ interface Props {
 }
 
 const { withoutMenu } = Astro.props;
-*/
+
 
 const { lang, prefix } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
+*/
 ---
 
 <header>

@@ -1,8 +1,9 @@
-import { createFluidValue } from "./src/utils/create-fluid-value";
 import containerQueriesPlugin from "@tailwindcss/container-queries";
 import typographyPlugin from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
+
+import { createFluidValue } from "./src/utils/create-fluid-value";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
