@@ -1,14 +1,13 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl } from "../i18n/utils";
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
 import GetInTouch from "../sections/get-in-touch.astro";
 import Illustration from "../sections/illustration.astro";
+import Project from "../sections/project.astro";
 
-const { lang, prefix } = getLangFromUrl(Astro.url);
-
-const t = useTranslations(lang);
+const { prefix } = getLangFromUrl(Astro.url);
 ---
 
 <BaseLayout>
@@ -88,6 +87,7 @@ const t = useTranslations(lang);
         #F1F3F5
       </div>
     </div>
+    <Project includeIds={["web-design-homepage", "app-design", "graphic-design"]} />
     <Illustration />
     <GetInTouch />
   </main>
