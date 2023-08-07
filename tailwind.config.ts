@@ -1,9 +1,8 @@
+import { createFluidValue } from "./src/utils/create-fluid-value";
 import containerQueriesPlugin from "@tailwindcss/container-queries";
 import typographyPlugin from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
-
-import { createFluidValue } from "./src/utils/create-fluid-value";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -33,6 +32,9 @@ export default {
         "fluid-body1": createFluidValue(12, 16),
         "fluid-body2": createFluidValue(12, 15),
         "fluid-small": createFluidValue(11, 12),
+      },
+      borderRadius: {
+        "2xl": "0.938rem", // 15px
       },
       transitionTimingFunction: {
         DEFAULT: defaultTheme.transitionTimingFunction["in-out"],

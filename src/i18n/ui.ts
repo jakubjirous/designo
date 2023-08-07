@@ -39,7 +39,7 @@ export const ui: TranslationObject = {
       " We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.",
 
     "get-in-touch.btn.url": "contact",
-    "get-in-touch.btn.aria": "Get In Touch",
+    "get-in-touch.btn.aria": "Go to contact page",
     "get-in-touch.btn.title": "Get In Touch",
     "get-in-touch.heading": "Let’s talk about your project",
     "get-in-touch.content":

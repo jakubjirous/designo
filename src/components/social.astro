@@ -8,12 +8,12 @@ interface Props {
 
 const { class: className, style } = Astro.props;
 
-const { lang, prefix } = getLangFromUrl(Astro.url);
+const { lang } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
 ---
 
-<div class:list={[className, "flex flex-row items-center justify-center gap-4"]}>
+<div class:list={[className, "flex flex-row items-center justify-center gap-4"]} style={style}>
   <a
     href={t("social.facebook.url")}
     target="_blank"
