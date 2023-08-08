@@ -9,15 +9,18 @@ interface Props {
   class?: string;
   style?: string;
   includeIds: string[];
+  sortDesc?: boolean;
 }
 
-const { class: className, style, includeIds } = Astro.props;
+const { class: className, style, includeIds, sortDesc } = Astro.props;
 
 const { lang } = getLangFromUrl(Astro.url);
 
 const entries = await getCollection("project", ({ id }) => id.startsWith(`${lang}`));
 
-const projects = entries.filter(({ data }) => !data.isDraft && includeIds.includes(data.id));
+const filteredEntries = entries.filter(({ data }) => !data.isDraft && includeIds.includes(data.id));
+
+const projects = sortDesc ? filteredEntries.reverse() : filteredEntries;
 ---
 
 <Section>
