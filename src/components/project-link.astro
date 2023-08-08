@@ -38,7 +38,14 @@ const bgDesktopWebp = await getImage({
     <h2>{data.title}</h2>
     <p class="inline-flex items-center gap-4 text-[0.9375rem] font-medium tracking-[0.3125rem] text-white">
       {data.view}
-      <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        width="7"
+        height="10"
+        viewBox="0 0 7 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transition-all duration-400 group-hover:translate-x-1"
+      >
         <path d="M1.5 1L5.5 5L1.5 9" stroke="#E7816B" stroke-width="2"></path>
       </svg>
     </p>
