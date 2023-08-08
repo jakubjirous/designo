@@ -17,8 +17,8 @@ export const ui: TranslationObject = {
     "site.description": "Award-winning custom designs and digital branding solutions.",
     "site.ogImage": "assets/designo-og.webp",
 
-    "company.title": "Our Company",
-    "company.url": "company",
+    "about.title": "Our Company",
+    "about.url": "about",
 
     "location.title": "Locations",
     "location.url": "location",
@@ -27,6 +27,13 @@ export const ui: TranslationObject = {
     "contact.url": "contact",
 
     "404.title": "Page Not Found",
+
+    "hero.heading": "Award-winning custom designs and digital branding solutions",
+    "hero.content":
+      "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
+    "hero.btn.url": "about",
+    "hero.btn.aria": "Go to About page",
+    "hero.btn.title": "Learn more",
 
     "illustration.first.heading": "Passionate",
     "illustration.first.content":
