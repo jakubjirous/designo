@@ -13,7 +13,11 @@ const { href, ariaLabel, class: className, style, onDark = false } = Astro.props
 <a
   href={href}
   aria-label={ariaLabel}
-  class:list={["inline-flex flex-row items-center gap-[1.169rem] focus-on-dark", className]}
+  class:list={[
+    "inline-flex flex-row items-center gap-[1.169rem]",
+    className,
+    onDark ? "focus-on-dark" : "focus-on-light",
+  ]}
   style={style}
 >
   <span
