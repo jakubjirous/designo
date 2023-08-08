@@ -31,7 +31,7 @@ export default {
         "fluid-h3": createFluidValue(18, 20),
         "fluid-body1": createFluidValue(12, 16),
         "fluid-body2": createFluidValue(12, 15),
-        "fluid-small": createFluidValue(11, 12),
+        "fluid-small": createFluidValue(12, 12),
       },
       borderRadius: {
         "2xl": "0.938rem", // 15px
