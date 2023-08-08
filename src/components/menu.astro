@@ -14,7 +14,7 @@ const { lang, prefix } = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<nav class:list={["flex flex-col items-center justify-center md:flex-row", className]}>
+<nav class:list={["flex flex-col items-center justify-center md:flex-row", className]} style={style}>
   <ul class="inline-flex flex-col items-center justify-center gap-8 md:flex-row md:gap-11">
     <li>
       <a
