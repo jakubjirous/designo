@@ -3,6 +3,7 @@ import { getLangFromUrl } from "../i18n/utils";
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
+import GetInTouch from "../sections/get-in-touch.astro";
 import Project from "../sections/project.astro";
 
 const { prefix } = getLangFromUrl(Astro.url);
@@ -21,6 +22,7 @@ const { prefix } = getLangFromUrl(Astro.url);
     </ul>
 
     <Project includeIds={["web-design", "graphic-design"]} />
+    <GetInTouch />
   </main>
   <Footer />
 </BaseLayout>
