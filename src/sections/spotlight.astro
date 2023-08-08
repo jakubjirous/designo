@@ -1,0 +1,47 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Container from "../components/container.astro";
+import Section from "../components/section.astro";
+import { getImage } from "astro:assets";
+
+import bgPattern from "../assets/spotlight/bg-pattern.svg";
+
+const optimizedBgPattern = await getImage({ src: bgPattern });
+
+const { lang, prefix } = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+
+interface Props {
+  heading: string;
+  content: string;
+  class?: string;
+}
+
+const { heading, content, class: className } = Astro.props;
+---
+
+<Section class="!pt-0">
+  <Container class="px-0 md:px-8 xl:px-16">
+    <div
+      class:list={[
+        "bg-cover xl:bg-contain bg-peach min-h-[20rem] md:min-h-[15.75rem] flex flex-col justify-center items-center text-center bg-no-repeat bg-right md:rounded-2xl",
+        className,
+      ]}
+      style={`background-image: url(${optimizedBgPattern.src});`}
+    >
+      <div class="flex flex-col gap-6">
+        <h2 class="text-white">
+          {heading}
+        </h2>
+        <p class="text-white md:max-w-[25rem]">
+          {content}
+        </p>
+      </div>
+    </div>
+    <div
+      class="absolute left-[-5rem] top-[7.8rem] -z-20 hidden h-[37rem] w-[63rem] rounded-[18rem_18rem_18rem_0] bg-athens-grey opacity-50 xl:block 2xl:w-[73rem]"
+    >
+    </div>
+  </Container>
+</Section>
