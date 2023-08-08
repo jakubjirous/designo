@@ -17,6 +17,8 @@ export const ui: TranslationObject = {
     "site.description": "Award-winning custom designs and digital branding solutions.",
     "site.ogImage": "assets/designo-og.webp",
 
+    "drawer.aria.toggle": "Toggle mobile menu",
+
     "about.title": "Our Company",
     "about.url": "about",
 
