@@ -4,6 +4,7 @@ import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
 import GetInTouch from "../sections/get-in-touch.astro";
+import Hero from "../sections/hero.astro";
 import Illustration from "../sections/illustration.astro";
 import Project from "../sections/project.astro";
 
@@ -14,7 +15,7 @@ const { prefix } = getLangFromUrl(Astro.url);
   <Header />
   <main>
     <ul>
-      <li><a href={`${prefix}company`}>Our Company</a></li>
+      <li><a href={`${prefix}about`}>Our Company</a></li>
       <li><a href={`${prefix}location`}>Location</a></li>
       <li><a href={`${prefix}contact`}>Contact</a></li>
     </ul>
@@ -87,6 +88,7 @@ const { prefix } = getLangFromUrl(Astro.url);
         #F1F3F5
       </div>
     </div>
+    <Hero />
     <Project includeIds={["web-design-homepage", "app-design", "graphic-design"]} />
     <Illustration />
     <GetInTouch />

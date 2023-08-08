@@ -9,13 +9,13 @@ const { lang, prefix } = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<BaseLayout title={`${t("company.title")} | ${t("site.title")}`}>
+<BaseLayout title={`${t("about.title")} | ${t("site.title")}`}>
   <Header />
   <main>
     <h1>Our Company</h1>
     <ul>
       <li><a href={`${prefix}`}>Home</a></li>
-      <li><a href={`${prefix}company`}>Our Company</a></li>
+      <li><a href={`${prefix}about`}>Our Company</a></li>
       <li><a href={`${prefix}location`}>Location</a></li>
       <li><a href={`${prefix}contact`}>Contact</a></li>
     </ul>

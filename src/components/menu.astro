@@ -14,15 +14,15 @@ const { lang, prefix } = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<nav class:list={[className, "flex flex-col items-center justify-center md:flex-row"]}>
+<nav class:list={["flex flex-col items-center justify-center md:flex-row", className]}>
   <ul class="inline-flex flex-col items-center justify-center gap-8 md:flex-row md:gap-11">
     <li>
       <a
-        href={`${prefix}${t("company.url")}`}
-        aria-label={t("company.title")}
+        href={`${prefix}${t("about.url")}`}
+        aria-label={t("about.title")}
         class={onDark ? "nav-link-on-dark focus-on-dark" : "nav-link-on-light focus-on-light"}
       >
-        {t("company.title")}
+        {t("about.title")}
       </a>
     </li>
     <li>
