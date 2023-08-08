@@ -1,19 +1,22 @@
 ---
 import Main from "../components/main.astro";
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
 import GetInTouch from "../sections/get-in-touch.astro";
 import Project from "../sections/project.astro";
+import Spotlight from "../sections/spotlight.astro";
 
-const { prefix } = getLangFromUrl(Astro.url);
+const { lang, prefix } = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
 ---
 
 <BaseLayout>
   <Header />
   <Main>
-    <h1>Web Design</h1>
+    <Spotlight heading={t("web.heading")} content={t("web.content")} />
     <Project includeIds={["app-design", "graphic-design"]} />
     <GetInTouch />
   </Main>
