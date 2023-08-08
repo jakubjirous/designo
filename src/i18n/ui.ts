@@ -21,12 +21,15 @@ export const ui: TranslationObject = {
 
     "about.title": "Our Company",
     "about.url": "about",
+    "about.aria": "Go to About page",
 
     "location.title": "Locations",
     "location.url": "location",
+    "location.aria": "Go to Location page",
 
     "contact.title": "Contact",
     "contact.url": "contact",
+    "contact.aria": "Go to Contact page",
 
     "404.title": "Page Not Found",
 
