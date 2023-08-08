@@ -1,4 +1,5 @@
 ---
+import Main from "../components/main.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
@@ -11,12 +12,12 @@ const t = useTranslations(lang);
 
 <BaseLayout title={`${t("404.title")} | ${t("site.title")}`}>
   <Header />
-  <main>
+  <Main>
     <h1>404</h1>
     <ul>
       <li><a href={`${prefix}`}>Home</a></li>
     </ul>
-  </main>
+  </Main>
   <Footer />
 </BaseLayout>
 
