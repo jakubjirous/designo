@@ -7,6 +7,11 @@ import BaseLayout from "../layouts/base-layout.astro";
 import GetInTouch from "../sections/get-in-touch.astro";
 import Project from "../sections/project.astro";
 import Spotlight from "../sections/spotlight.astro";
+import { getImage } from "astro:assets";
+
+import bgPattern from "../assets/web-design/bg-pattern.svg";
+
+const optimizedBgPattern = await getImage({ src: bgPattern });
 
 const { lang, prefix } = getLangFromUrl(Astro.url);
 
@@ -16,7 +21,12 @@ const t = useTranslations(lang);
 <BaseLayout>
   <Header />
   <Main>
-    <Spotlight heading={t("web.heading")} content={t("web.content")} />
+    <Spotlight
+      heading={t("web.heading")}
+      content={t("web.content")}
+      bgPattern={optimizedBgPattern.src}
+      class="bg-right"
+    />
     <Project includeIds={["app-design", "graphic-design"]} />
     <GetInTouch />
   </Main>
