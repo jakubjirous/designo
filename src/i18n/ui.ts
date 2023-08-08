@@ -31,6 +31,15 @@ export const ui: TranslationObject = {
     "contact.url": "contact",
     "contact.aria": "Go to Contact page",
 
+    "web.heading": "Web Design",
+    "web.content": "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
+
+    "app.heading": "App Design",
+    "app.content": "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
+
+    "graphic.heading": "Graphic Design",
+    "graphic.content": "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
+
     "404.title": "Page Not Found",
 
     "hero.heading": "Award-winning custom designs and digital branding solutions",
