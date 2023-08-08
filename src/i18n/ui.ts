@@ -37,8 +37,8 @@ export const ui: TranslationObject = {
     "hero.content":
       "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
     "hero.btn.url": "about",
-    "hero.btn.aria": "Learn more about our company",
-    "hero.btn.title": "Learn more",
+    "hero.btn.aria": "Discover more about our company",
+    "hero.btn.title": "Discover more",
 
     "illustration.first.heading": "Passionate",
     "illustration.first.content":
