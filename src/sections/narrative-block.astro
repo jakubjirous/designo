@@ -32,14 +32,14 @@ const {
     <div class:list={["flex flex-col items-center justify-center rounded-2xl xl:flex-row xl:min-h-[40rem]", className]}>
       <div
         class:list={[
-          "narrative-block-bg w-full h-[20rem] bg-cover bg-no-repeat sm:rounded-t-2xl xl:h-[40rem] xl:rounded-none",
+          "narrative-block-bg h-[20rem] w-full bg-cover bg-no-repeat sm:rounded-t-2xl xl:h-[40rem] xl:rounded-none",
           onRight ? "xl:order-2 xl:rounded-r-2xl xl:basis-3/7" : "xl:order-1 xl:rounded-l-2xl xl:basis-4/7",
         ]}
       >
       </div>
       <div
         class:list={[
-          "bg-cover w-full bg-[length:36.5rem_36.5rem] bg-[top_right] bg-no-repeat py-20 px-6 flex flex-col items-center justify-center gap-6 bg-provincial-pink text-center sm:rounded-b-2xl sm:bg-[top_8rem_right_7.5rem] md:bg-[top_8rem_right_9.5rem] lg:bg-[top_8rem_right_17.5rem] xl:bg-[length:50rem_50rem] xl:bg-[top_24.5rem_right_3rem] 2xl:bg-[top_24.5rem_right_7.5rem] md:py-[4.25rem] md:px-[3.5rem] xl:px-[6rem] xl:items-start xl:text-left xl:rounded-none xl:min-h-[40rem]",
+          "flex w-full flex-col items-center justify-center gap-6 bg-provincial-pink bg-[length:36.5rem_36.5rem] bg-[bottom_left] bg-no-repeat px-6 py-20 text-center sm:rounded-b-2xl sm:bg-[bottom_3rem_center] md:bg-[bottom_3rem_center] md:px-[3.5rem] md:py-[4.25rem] lg:bg-[bottom_3rem_center] xl:min-h-[40rem] xl:items-start xl:rounded-none xl:bg-[bottom_left] xl:px-[6rem] xl:text-left",
           onRight ? "xl:order-1 xl:rounded-l-2xl xl:basis-4/7" : "xl:order-2 xl:rounded-r-2xl xl:basis-3/7",
         ]}
         style={{ backgroundImage: `url('${bgPattern}')` }}
