@@ -3,7 +3,7 @@
 }
 
 .btn-on-light {
-  @apply btn-base bg-peach text-white hover:bg-mona-lisa hover:text-white;
+  @apply btn-base bg-moccaccino text-white hover:bg-peach hover:text-white;
 }
 
 .btn-on-dark {

@@ -2,7 +2,7 @@
 title: "Australia"
 btn:
   url: "location#australia"
-  aria: "Navigate to Australia office details"
+  aria: "Go to Location page"
   title: "See location"
 address:
   office: "Designo AU Office"
