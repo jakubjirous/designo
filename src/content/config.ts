@@ -1,4 +1,4 @@
-import { projectCollection, designCollection } from "./collections";
+import { designCollection, projectCollection } from "./collections";
 
 export const collections = {
   project: projectCollection,
