@@ -5,7 +5,7 @@ import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
 
-const { lang, prefix } = getLangFromUrl(Astro.url);
+const { lang } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
 ---
