@@ -20,6 +20,7 @@ export default {
     extend: {
       colors: {
         peach: "#E7816B",
+        moccaccino: "#972E17",
         "mona-lisa": "#FFAD9B",
         "provincial-pink": "#FDF3F0",
         baltic: "#1D1C1E",
