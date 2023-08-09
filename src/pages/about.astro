@@ -8,6 +8,7 @@ import BaseLayout from "../layouts/base-layout.astro";
 import GetInTouch from "../sections/get-in-touch.astro";
 import HeroAbout from "../sections/hero-about.astro";
 import NarrativeBlock from "../sections/narrative-block.astro";
+import LocationBanner from "../sections/location-banner.astro";
 
 import bgPattern from "../assets/about/bg-block-pattern.svg";
 
@@ -47,6 +48,7 @@ const t = useTranslations(lang);
       bgTablet={optimizedBgTablet1.src}
       bgDesktop={optimizedBgDesktop1.src}
     />
+    <LocationBanner />
     <NarrativeBlock
       heading={t("about.block2.heading")}
       content1={t("about.block2.content1")}
