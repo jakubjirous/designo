@@ -2,7 +2,7 @@
 title: "Canada"
 btn:
   url: "location#canada"
-  aria: "Go to Location page"
+  aria: "See location button for office in Canada"
   title: "See location"
 address:
   office: "Designo Central Office"
