@@ -1,11 +1,6 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Container from "../components/container.astro";
 import Section from "../components/section.astro";
-
-const { lang, prefix } = getLangFromUrl(Astro.url);
-
-const t = useTranslations(lang);
 
 interface Props {
   heading: string;
@@ -18,7 +13,7 @@ const { heading, content, bgPattern, class: className } = Astro.props;
 ---
 
 <Section class="!pt-0">
-  <Container class="px-0 md:px-8 xl:px-16">
+  <Container class="!px-0 md:!px-8 xl:!px-16">
     <div
       class:list={[
         "bg-cover bg-peach min-h-[20rem] bg-[length:54rem_36.5rem] 2xl:bg-[length:80%_auto] md:min-h-[15.75rem] flex flex-col justify-center items-center text-center bg-no-repeat md:rounded-2xl",
