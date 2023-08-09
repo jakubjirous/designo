@@ -21,7 +21,7 @@ export const ui: TranslationObject = {
 
     "about.title": "Our Company",
     "about.url": "about",
-    "about.aria": "Go to About page",
+    "about.aria": "Our Company menu button",
     "about.hero.heading": "About Us",
     "about.hero.content":
       "Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.",
@@ -40,11 +40,11 @@ export const ui: TranslationObject = {
 
     "location.title": "Locations",
     "location.url": "location",
-    "location.aria": "Go to Location page",
+    "location.aria": "Locations menu button",
 
     "contact.title": "Contact",
     "contact.url": "contact",
-    "contact.aria": "Go to Contact page",
+    "contact.aria": "Contact menu button",
 
     "web.heading": "Web Design",
     "web.content": "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
@@ -61,7 +61,7 @@ export const ui: TranslationObject = {
     "hero.content":
       "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
     "hero.btn.url": "about",
-    "hero.btn.aria": "Discover more about our company",
+    "hero.btn.aria": "Discover more button",
     "hero.btn.title": "Discover more",
 
     "illustration.first.heading": "Passionate",
@@ -75,7 +75,7 @@ export const ui: TranslationObject = {
       " We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.",
 
     "get-in-touch.btn.url": "contact",
-    "get-in-touch.btn.aria": "Go to contact page",
+    "get-in-touch.btn.aria": "Get In Touch button",
     "get-in-touch.btn.title": "Get In Touch",
     "get-in-touch.heading": "Let’s talk about your project",
     "get-in-touch.content":
