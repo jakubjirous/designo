@@ -18,3 +18,20 @@ export const projectCollection = defineCollection({
       .strict(),
   type: "content",
 });
+
+export const designCollection = defineCollection({
+  schema: ({ image }) =>
+    z
+      .object({
+        title: z.string(),
+        description: z.string(),
+        url: z.string(),
+        aria: z.string(),
+        bg: image(),
+        category: z.enum(["web", "app", "graphic"]),
+        publishedDate: z.date(),
+        isDraft: z.boolean().default(false),
+      })
+      .strict(),
+  type: "content",
+});
