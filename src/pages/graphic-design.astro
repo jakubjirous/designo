@@ -1,4 +1,8 @@
 ---
+import { getCollection } from "astro:content";
+import Design from "../sections/design.astro";
+import { getDesignsByCategory } from "../utils/get-designs-by-category";
+import { getSortedDesigns } from "../utils/get-sorted-designs";
 import Main from "../components/main.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Footer from "../components/footer.astro";
@@ -13,9 +17,15 @@ import bgPattern from "../assets/graphic-design/bg-pattern.svg";
 
 const optimizedBgPattern = await getImage({ src: bgPattern });
 
-const { lang, prefix } = getLangFromUrl(Astro.url);
+const { lang } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
+
+const entries = await getCollection("design", ({ id }) => id.startsWith(`${lang}`));
+
+const filteredDesigns = getDesignsByCategory(entries, "graphic");
+
+const sortedDesigns = getSortedDesigns(filteredDesigns);
 ---
 
 <BaseLayout>
@@ -27,6 +37,7 @@ const t = useTranslations(lang);
       bgPattern={optimizedBgPattern.src}
       class="bg-left"
     />
+    <Design designs={sortedDesigns} />
     <Project includeIds={["app-design", "web-design"]} sortDesc={true} />
     <GetInTouch />
   </Main>
