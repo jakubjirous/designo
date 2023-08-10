@@ -35,16 +35,16 @@ const { latitude, longitude, zoom, mapStyle, container, accessToken, interactive
     constructor() {
       super();
 
-      mapboxgl.accessToken = this.dataset.accessToken;
+      mapboxgl.accessToken = this.dataset.accessToken!;
 
-      const lngLat = [this.dataset.longitude, this.dataset.latitude];
+      const lngLat: [number, number] = [Number(this.dataset.longitude!), Number(this.dataset.latitude!)];
 
       const map = new mapboxgl.Map({
-        container: this.dataset.container,
-        interactive: JSON.parse(this.dataset.interactive),
+        container: this.dataset.container!,
+        interactive: JSON.parse(this.dataset.interactive!),
         center: lngLat,
-        zoom: this.dataset.zoom,
-        style: this.dataset.mapStyle, // https://docs.mapbox.com/api/maps/styles/
+        zoom: Number(this.dataset.zoom!),
+        style: this.dataset.mapStyle!, // https://docs.mapbox.com/api/maps/styles/
       });
 
       map.addControl(new mapboxgl.NavigationControl());

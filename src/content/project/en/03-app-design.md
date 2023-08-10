@@ -2,7 +2,7 @@
 id: "app-design"
 title: "App Design"
 url: "app-design"
-aria: "Go to App Design page"
+aria: "App Design button"
 view: "View projects"
 bgDesktop: "../assets/desktop/bg-app-design.jpg"
 bgTablet: "../assets/tablet/bg-app-design.jpg"

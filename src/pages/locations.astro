@@ -5,7 +5,7 @@ import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
 import GetInTouch from "../sections/get-in-touch.astro";
-import LocationBanner from "../sections/location-banner.astro";
+import LocationBlock from "../sections/location-block.astro";
 
 const { lang } = getLangFromUrl(Astro.url);
 
@@ -15,7 +15,7 @@ const t = useTranslations(lang);
 <BaseLayout title={`${t("location.title")} | ${t("site.title")}`}>
   <Header />
   <Main>
-    <LocationBanner />
+    <LocationBlock />
     <GetInTouch />
   </Main>
   <Footer />

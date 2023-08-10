@@ -2,7 +2,7 @@
 id: "canada"
 title: "Canada"
 btn:
-  url: "location#canada"
+  url: "locations#canada"
   aria: "See location button for office in Canada"
   title: "See location"
 address:

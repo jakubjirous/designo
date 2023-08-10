@@ -39,7 +39,7 @@ export const ui: TranslationObject = {
       "We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results.",
 
     "location.title": "Locations",
-    "location.url": "location",
+    "location.url": "locations",
     "location.aria": "Locations menu button",
 
     "contact.title": "Contact",

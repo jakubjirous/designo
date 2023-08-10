@@ -1,13 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { Image } from "astro:assets";
+import { getLangFromUrl } from "../i18n/utils";
 import Container from "../components/container.astro";
 import Section from "../components/section.astro";
-import LocationMap from "../components/location-map.astro";
 
-const { lang } = getLangFromUrl(Astro.url);
-
-const t = useTranslations(lang);
+const { lang, prefix } = getLangFromUrl(Astro.url);
 
 interface Props {
   class?: string;
@@ -21,10 +19,49 @@ const entries = await getCollection("location", ({ id }) => id.startsWith(`${lan
 const locations = entries.filter(({ data }) => !data.isDraft);
 ---
 
-<Section class="mb-[-4rem] !py-0 md:mb-[-1.5rem] md:!pb-[3.5rem] md:pt-0 xl:mb-0 xl:!pb-[5rem] xl:pt-0">
-  <Container class="!px-0 md:!px-8 xl:!px-16">
-    <div class:list={["flex flex-col gap-10 md:gap-[7.5rem] xl:gap-8", className]} style={style}>
-      {locations.map((location, index) => <LocationMap location={location} isEven={!!(index % 2)} />)}
+<Section>
+  <Container>
+    <div
+      class:list={["grid grid-cols-1 grid-rows-3 gap-12 md:gap-20 xl:grid-cols-3 xl:grid-rows-1 xl:gap-8", className]}
+      style={style}
+    >
+      {
+        locations.map(({ data }, index) => (
+          <div class="flex flex-col items-center gap-12 text-center">
+            <div class:list={["relative z-0 w-full max-w-[12.625rem]", `banner-oval-${index + 1}`]}>
+              <Image src={data.bg} alt={data.title} width={202} height={202} />
+            </div>
+            <div class="flex max-w-[25rem] flex-col items-center gap-8 md:max-w-full xl:gap-8">
+              <h3>{data.title}</h3>
+              <a href={`${prefix}${data.btn.url}`} aria-label={data.btn.aria} class="btn-on-light">
+                {data.btn.title}
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div
+      class="absolute right-[-30rem] top-[11.5rem] -z-20 hidden h-[37rem] w-[62rem] rounded-[18rem_0_18rem_18rem] bg-athens-grey opacity-50 xl:block 2xl:right-[-27rem]"
+    >
     </div>
   </Container>
 </Section>
+
+<style>
+  .banner-gradient-base {
+    @apply before:absolute before:inset-0 before:-z-10 before:aspect-square before:w-full before:max-w-[12.625rem] before:rounded-full before:from-[rgba(93,2,2,0.00)] before:to-[rgba(93,2,2,0.50)] before:opacity-20 before:content-[''];
+  }
+
+  .banner-oval-1 {
+    @apply banner-gradient-base before:bg-gradient-to-t;
+  }
+
+  .banner-oval-2 {
+    @apply banner-gradient-base before:bg-gradient-to-l;
+  }
+
+  .banner-oval-3 {
+    @apply banner-gradient-base before:bg-gradient-to-b;
+  }
+</style>
