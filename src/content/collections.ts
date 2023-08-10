@@ -38,7 +38,7 @@ export const designCollection = defineCollection({
 
 const zodLink = z.object({
   url: z.string(),
-  aria: z.string(),
+  aria: z.string().optional(),
   title: z.string(),
 });
 

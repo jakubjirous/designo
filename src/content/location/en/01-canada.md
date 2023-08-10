@@ -13,11 +13,9 @@ contact:
   title: "Contact"
   phone:
     url: "tel:+12538638967"
-    aria: "Connect via phone"
     title: "+1 253-863-8967"
   email:
     url: "mailto:contact@designo.co"
-    aria: "Start email conversation"
     title: "contact@designo.co"
 map:
   latitude: 43.644009

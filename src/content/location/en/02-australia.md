@@ -13,11 +13,9 @@ contact:
   title: "Contact"
   phone:
     url: "tel:0267209092"
-    aria: "Connect via phone"
     title: "(02) 6720 9092"
   email:
     url: "mailto:contact@designo.au"
-    aria: "Start email conversation"
     title: "contact@designo.au"
 map:
   latitude: -30.329530
