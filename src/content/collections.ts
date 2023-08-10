@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from "astro:content";
+import { defineCollection, z } from "astro:content";
 
 export const projectCollection = defineCollection({
   schema: ({ image }) =>
@@ -46,19 +46,24 @@ export const locationCollection = defineCollection({
   schema: ({ image }) =>
     z
       .object({
+        id: z.string(),
         title: z.string(),
         btn: zodLink,
         address: z.object({
-          office: z.string(),
+          title: z.string(),
           street: z.string(),
           city: z.string(),
         }),
         contact: z.object({
+          title: z.string(),
           phone: zodLink,
           email: zodLink,
         }),
         bg: image(),
-        map: z.string().optional(), // TODO: add coordination to the live map location (Jakub Jirous 2023-08-09 12:46:00)
+        map: z.object({
+          latitude: z.number(),
+          longitude: z.number(),
+        }),
         isDraft: z.boolean().default(false),
       })
       .strict(),
