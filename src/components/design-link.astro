@@ -15,7 +15,7 @@ const bg = await getImage({ src: data.bg, width: 327, height: 320, format: "webp
 
 <a
   href={data.url}
-  aria-label={data.aria}
+  aria-label={data.aria ?? undefined}
   target="_blank"
   rel="noreferrer"
   class:list={["flex flex-col md:flex-row xl:flex-col w-full group max-w-[20rem] md:max-w-full mx-auto rounded-2xl"]}
