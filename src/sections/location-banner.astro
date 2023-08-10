@@ -10,9 +10,10 @@ const { lang, prefix } = getLangFromUrl(Astro.url);
 interface Props {
   class?: string;
   style?: string;
+  onContact?: boolean;
 }
 
-const { class: className, style } = Astro.props;
+const { class: className, style, onContact = false } = Astro.props;
 
 const entries = await getCollection("location", ({ id }) => id.startsWith(`${lang}`));
 
@@ -42,7 +43,12 @@ const locations = entries.filter(({ data }) => !data.isDraft);
       }
     </div>
     <div
-      class="absolute right-[-30rem] top-[11.5rem] -z-20 hidden h-[37rem] w-[62rem] rounded-[18rem_0_18rem_18rem] bg-athens-grey opacity-50 xl:block 2xl:right-[-27rem]"
+      class:list={[
+        "hidden xl:absolute xl:-z-20 xl:bg-athens-grey xl:opacity-50 xl:block xl:h-[37rem] xl:w-[62rem]",
+        onContact
+          ? "xl:right-[-4rem] xl:top-[6rem] xl:rounded-[18rem_18rem_18rem_0] 2xl:w-[75rem]"
+          : "xl:right-[-30rem] xl:top-[11.5rem] xl:rounded-[18rem_0_18rem_18rem] 2xl:right-[-27rem]",
+      ]}
     >
     </div>
   </Container>

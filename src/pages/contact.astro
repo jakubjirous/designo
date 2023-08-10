@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import BaseLayout from "../layouts/base-layout.astro";
+import LocationBanner from "../sections/location-banner.astro";
 
 const { lang } = getLangFromUrl(Astro.url);
 
@@ -13,7 +14,7 @@ const t = useTranslations(lang);
 <BaseLayout title={`${t("contact.title")} | ${t("site.title")}`}>
   <Header />
   <Main>
-    <h1>Contact</h1>
+    <LocationBanner onContact={true} class="pb-[3.5rem] xl:pb-[5rem]" />
   </Main>
   <Footer />
 </BaseLayout>
