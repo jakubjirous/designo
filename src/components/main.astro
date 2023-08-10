@@ -7,6 +7,6 @@ interface Props {
 const { class: className, style } = Astro.props;
 ---
 
-<main class:list={["pt-[6rem] md:pt-[9.688rem]", className]} style={style}>
+<main transition:animate="morph" class:list={["pt-[6rem] md:pt-[9.688rem]", className]} style={style}>
   <slot />
 </main>

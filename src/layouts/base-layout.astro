@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 import "../styles/main.css";
@@ -59,6 +60,8 @@ const socialImageURL = new URL(ogImage || t("site.ogImage"), import.meta.env.PUB
     <link rel="preload" href="/fonts/jost-italic.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/jost-variable-font.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/jost-variable-italic-font.woff2" as="font" type="font/woff2" crossorigin />
+
+    <ViewTransitions fallback="swap" />
   </head>
   <body class="overflow-x-hidden" data-body>
     <slot />
