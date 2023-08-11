@@ -5,6 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/static";
 import { defineConfig, sharpImageService } from "astro/config";
 import { loadEnv } from "vite";
+import react from "@astrojs/react";
 
 const { PUBLIC_WEBSITE } = loadEnv(import.meta.env.MODE, process.cwd(), "");
 
@@ -29,6 +30,7 @@ export default defineConfig({
     prefetch(),
     tailwind(),
     sitemap(),
+    react(),
   ],
   output: "static",
   adapter: vercel(),
