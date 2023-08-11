@@ -20,7 +20,7 @@ const entries = await getCollection("location", ({ id }) => id.startsWith(`${lan
 const locations = entries.filter(({ data }) => !data.isDraft);
 ---
 
-<Section class={onContact ? "xl:overflow-y-hidden" : ""}>
+<Section class={onContact ? "xl:overflow-hidden" : ""}>
   <Container>
     <div
       class:list={["grid grid-cols-1 grid-rows-3 gap-12 md:gap-20 xl:grid-cols-3 xl:grid-rows-1 xl:gap-8", className]}

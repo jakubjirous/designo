@@ -60,6 +60,10 @@ export const ui: TranslationObject = {
     "graphic.content": "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
 
     "404.title": "Page Not Found",
+    "404.heading": "Oops, You've Taken a Wrong Turn!",
+    "404.content":
+      "We're sorry, but it seems the page you were looking for has decided to take a vacation. Maybe it's exploring the vast digital realm, or perhaps it's just shy and decided to hide for a while. Don't worry, though – you're not alone on this unexpected detour. Our web wizards are hard at work, trying to unravel this mystery and guide you back to the right path.",
+    "404.btn.title": "Back to home",
 
     "hero.heading": "Award-winning custom designs and digital branding solutions",
     "hero.content":

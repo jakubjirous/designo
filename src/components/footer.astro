@@ -5,12 +5,18 @@ import Logo from "./logo.astro";
 import Menu from "./menu.astro";
 import Social from "./social.astro";
 
+interface Props {
+  isAlone?: boolean;
+}
+
+const { isAlone = false } = Astro.props;
+
 const { lang, prefix } = getLangFromUrl(Astro.url);
 
 const t = useTranslations(lang);
 ---
 
-<footer class="bg-baltic pb-16 pt-60 md:pt-40 xl:pt-36">
+<footer class:list={[isAlone ? "pt-16 md:pt-20 xl:pt-[4.5rem]" : "pt-60 md:pt-40 xl:pt-36", "bg-baltic pb-16"]}>
   <Container>
     <div
       class="grid grid-cols-1 grid-rows-footer items-center gap-8 md:grid-cols-6 md:grid-rows-footer-md md:gap-x-0 md:gap-y-[2.625rem] xl:grid-cols-12"

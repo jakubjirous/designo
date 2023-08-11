@@ -25,10 +25,9 @@ const { class: className } = Astro.props;
 <Section class="!py-0 sm:!pb-[3.75rem] md:mt-0 xl:!pb-[5rem] xl:pt-0">
   <Container class="!px-0 md:!px-8 xl:!px-16">
     <div
-      class="flex flex-col items-center gap-12 px-6 py-[4.5rem] text-center sm:rounded-2xl md:items-start md:gap-10 md:px-16 md:text-left xl:flex-row xl:items-center xl:gap-24 xl:px-24"
       class:list={[
         "hero-contact-pattern",
-        "",
+        "flex flex-col items-center gap-12 px-6 py-[4.5rem] text-center sm:rounded-2xl md:items-start md:gap-10 md:px-16 md:text-left xl:flex-row xl:items-center xl:gap-24 xl:px-24",
         "bg-peach bg-[top_left] bg-no-repeat md:bg-[top_-5rem_left_-5rem] xl:bg-[bottom_left]",
         className,
       ]}
