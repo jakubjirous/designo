@@ -46,6 +46,10 @@ export const ui: TranslationObject = {
     "contact.url": "contact",
     "contact.aria": "Contact menu button",
 
+    "contact.hero.heading": "Contact Us",
+    "contact.hero.content":
+      "Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.",
+
     "web.heading": "Web Design",
     "web.content": "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
 
