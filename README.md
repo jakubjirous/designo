@@ -70,7 +70,7 @@ Users should be able to:
 - [React](https://reactjs.org/) – JS library
 - [React Hook Form](https://react-hook-form.com/) - For form state management
 - [Tailwind CSS](https://tailwindcss.com/) – For styles
-- [Flowbite](https://flowbite.com/) – Components on top of Tailwind CSS
+- [Mapbox](https://mapbox.com/) – Open-source maps
 
 ### What I learned
 
@@ -84,11 +84,6 @@ Users should be able to:
   - I deepened my knowledge of Tailwind CSS, a utility-first CSS framework. It simplifies rapid development by offering
     pre-defined utility classes that can be combined to create complex designs while maintaining a clean and readable
     codebase.
-
-- **Flowbite:**
-
-  - I explored Flowbite, a comprehensive UI kit built with Tailwind CSS. It provided me with pre-designed components,
-    layouts, and styles, helping me deepen my knowledge and skills with Tailwind CSS.
 
 - **React Hook Forms and Components in Astro:**
   - I learned about React Hook Forms, a library for building forms in React, and integrated them into Astro sites. This
@@ -109,8 +104,8 @@ Users should be able to:
   - Plugins:
     - [Typography Plugin](https://tailwindcss.com/docs/typography-plugin)
     - [Container Queries Plugin](https://github.com/tailwindlabs/tailwindcss-container-queries)
-- [Flowbite Documentation](https://flowbite.com/docs/getting-started/introduction/)
-  - [Astro vs. Flowbite](https://flowbite.com/docs/getting-started/astro/)
+- [Mapbox Documentation](https://docs.mapbox.com/)
+  - [Styles API](https://docs.mapbox.com/api/maps/styles/)
 
 ---
 
