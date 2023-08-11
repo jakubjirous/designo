@@ -1,5 +1,5 @@
 .btn-base {
-  @apply inline-flex whitespace-nowrap rounded-lg px-[1.9rem] pb-[1.25rem] pt-[1.35rem] font-jost text-fluid-body2 font-medium uppercase tracking-[0.063rem] transition-[background,color] duration-500;
+  @apply inline-flex justify-center whitespace-nowrap rounded-lg px-[1.9rem] pb-[1.25rem] pt-[1.35rem] font-jost text-fluid-body2 font-medium uppercase tracking-[0.063rem] transition-[background,color] duration-500;
 }
 
 .btn-on-light {
